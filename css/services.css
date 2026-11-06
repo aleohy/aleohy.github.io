@@ -1,0 +1,132 @@
+/* Services — warm, confident, clear */
+
+.page-services {
+  --bg: #f7f1e6;
+  --accent: #ffe14d;
+  --clay: #d4622f;
+  --line: #e7dcc8;
+}
+
+.services-title {
+  font-size: clamp(32px, 4.4vw, 56px);
+  line-height: 1.1;
+  max-width: 980px;
+}
+
+.section-intro {
+  max-width: 760px;
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.offer {
+  background: #fffdf8;
+  border: 1.5px solid var(--line);
+  border-radius: 18px;
+  padding: 32px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.offer:hover { border-color: var(--ink); transform: translateY(-3px); }
+
+.offer-num {
+  display: block;
+  margin-bottom: 14px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 1;
+  color: var(--clay);
+}
+
+.offer h3 { font-size: 24px; margin: 0 0 8px; }
+.offer p { margin: 0; color: var(--ink-soft); }
+
+.offer-also {
+  margin: 24px 0 0;
+  font-size: 18px;
+  color: var(--ink-soft);
+}
+
+.draft-note {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 14px;
+}
+
+.how {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.how-card {
+  border-top: 3px solid var(--ink);
+  padding-top: 20px;
+}
+
+.how-card h2 { font-size: clamp(24px, 2.6vw, 30px); }
+.how-card p { font-size: 18px; color: var(--ink-soft); }
+
+.cta-band {
+  background: var(--ink);
+  color: #fff;
+  border-radius: 28px;
+  padding: clamp(40px, 7vw, 80px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-band::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.12;
+  top: -160px;
+  right: -100px;
+}
+
+.cta-band h2 { font-size: clamp(32px, 5vw, 56px); }
+.cta-band p {
+  position: relative;
+  color: #d8d8d8;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 0 auto 12px;
+}
+
+.cta-band p:last-child { margin-bottom: 0; }
+
+.cta-band a {
+  color: var(--accent);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.cta-band .btn {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--ink);
+  font-size: 19px;
+  padding: 18px 34px;
+}
+
+.cta-band .btn:hover { box-shadow: 4px 4px 0 var(--clay); }
+
+@media (max-width: 760px) {
+  .how { grid-template-columns: 1fr; }
+  .offer { padding: 24px; }
+}

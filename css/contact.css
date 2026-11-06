@@ -1,0 +1,52 @@
+/* Contact — minimal and warm */
+
+.contact {
+  padding: clamp(64px, 11vw, 140px) 0 clamp(72px, 10vw, 128px);
+}
+
+.contact .container { max-width: 860px; }
+
+.contact-links {
+  list-style: none;
+  margin: 48px 0 0;
+  padding: 0;
+  border-top: 2px solid var(--ink);
+}
+
+.contact-links a {
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 4px;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(22px, 3vw, 32px);
+  letter-spacing: -0.02em;
+  transition: background 0.2s, padding 0.2s;
+}
+
+.contact-links a:hover {
+  background: rgba(255, 225, 77, 0.35);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.contact-kind {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contact-links .arrow { transition: transform 0.2s; }
+.contact-links a:hover .arrow { transform: translateX(6px); }
+
+@media (max-width: 600px) {
+  .contact-links a { grid-template-columns: 1fr auto; }
+  .contact-kind { grid-column: 1 / -1; }
+}
